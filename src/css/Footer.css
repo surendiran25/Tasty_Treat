@@ -1,0 +1,117 @@
+.footer{
+  background:#151515;color:#9b9b9b;font-family:system-ui,sans-serif
+}
+
+.footer-top{
+  padding:80px 0
+}
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:50px
+}
+
+
+.logo1{
+  font:700 48px Georgia,serif;
+  color:#fff;margin-bottom:20px
+}
+.logo1 span{
+  font:700 48px Georgia,serif;
+  color:#ff2d20
+}
+.footer-brand p{
+  line-height:1.9;
+  font-size:16px;
+  max-width:420px
+}
+
+
+.social{display:flex;
+  gap:12px;
+  margin-top:30px
+}
+
+.social button{
+  width:48px;
+  height:48px;
+  border:none;
+  background:#252525;
+  color:#aaa;
+  cursor:pointer;
+  transition:.35s
+}
+
+
+
+
+.footer h3{color:#fff;
+  font-size:24px;
+  margin-bottom:30px;
+  position:relative
+}
+
+
+.footer h3:after{content:"";
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:80px;
+  height:3px;
+  background:#ff2d20
+}
+
+.footer ul{list-style:none;
+  cursor: pointer;
+  padding:0
+}
+
+.footer li{display:flex;align-items:center;gap:8px;margin:16px 0;color:#ff2d20}
+
+
+.footer li a{text-decoration:none;color:#9b9b9b;transition:.3s}
+
+
+.footer li a:hover{color:#fff;padding-left:8px}
+
+
+.box{
+  display:flex;
+  text-align: justify;
+  gap:15px;
+  margin-bottom:22px
+}
+
+
+.icon2{
+  width:48px;
+  height:48px;
+  background:#252525;
+  border-radius:10px;
+  color:#ff2d20;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.3s}
+
+  
+
+.box:hover .icon{background:#ff2d20;color:#fff}
+
+.box h4{margin:0;color:#fff}.box p{margin:4px 0 0}
+
+.footer-bottom{border-top:1px solid #2a2a2a;padding:25px 0}
+
+.bottom-container{max-width:1200px;margin:auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+
+.bottom-container span{color:#ff2d20}
+
+.bottom-links{display:flex;gap:30px}.bottom-links a{text-decoration:none;color:#999}.bottom-links a:hover{color:#fff}
+
+.scrollTop{position:fixed;right:30px;bottom:30px;width:58px;height:58px;border:none;border-radius:14px;background:#ff2d20;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 0 30px rgba(255,45,32,.45);transition:.35s}
+
+.scrollTop:hover{transform:translateY(-8px);box-shadow:0 0 45px rgba(255,45,32,.7)}
+@media(max-width:992px){.footer-container{grid-template-columns:1fr 1fr}.bottom-container{flex-direction:column;gap:20px}}
+@media(max-width:600px){.footer-container{grid-template-columns:1fr}.bottom-links{flex-wrap:wrap;justify-content:center}.logo{font-size:38px}}

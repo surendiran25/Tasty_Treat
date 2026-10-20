@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  
+  background: #f8f3eb;
+  min-height: 100vh;
+  padding: 40px 80px;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Badge */
+.top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  margin-left: 0px;
+  margin-top: 70px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.badge-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff6a00, #ff2d00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Layout */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Left */
+.hero-left {
+  width: 500px;
+}
+
+.hero-left h1 {
+  font-size: 75px;
+  line-height: 1.08;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #1b1b1b;
+  text-align: left;
+  margin-bottom: 15px;
+
+  text-shadow:
+    0 3px 10px rgba(0,0,0,0.08);
+
+  transition: all 0.4s ease;
+}
+
+.hero-left span {
+  background: linear-gradient(135deg, #ff8c00, #ff3b1f, #c40000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 75px;
+  font-weight: 900;
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 5px 15px rgba(255,70,0,.25);
+}
+
+
+.hero-left h1:hover{
+    transform: translateY(-3px);
+    letter-spacing: -1px;
+}
+
+
+.hero-left h1::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:6px;
+    margin-top:18px;
+    border-radius:20px;
+
+    background:linear-gradient(to right,#ff9d00,#ff3b1f);
+
+    transition:.4s ease;
+}
+
+.hero-left h1:hover::after{
+    width:180px;
+}
+
+.hero-left p {
+  text-align: justify;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Right */
+.hero-right {
+  width: 600px;
+  position: relative;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-bg {
+  width: 550px;
+  height: 550px;
+  background: #f2dfcf8d;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.burger {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 0;
+}
+
+/* Floating Cards */
+.floating1 {
+  
+  position: absolute;
+  background: white;
+  width: 200px;
+  padding: 20px 20px;
+  border-radius: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
+.icon1 {
+  width: 35px;
+  height: 35px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.fire {
+  background: #ffe9e4;
+}
+
+.clock {
+  background: #edf8ef;
+}
+
+.star {
+  background: #fff4dc;
+}
+
+.floating h3 {
+  font-size: 24px;
+}
+
+.floating p {
+  font-size: 15px;
+  color: gray;
+  margin-top: 4px;
+}
+
+/* Positions */
+.hot {
+  top: 80px;
+  left: -50px;
+  animation-name: myAnimation3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.delivery {
+  top: 300px;
+  right: -30px;
+  animation-name: myAnimation2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.rating {
+  
+  bottom: 200px;
+  right: -70px;
+  animation-name: myAnimation1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes myAnimation1 {
+  from{bottom: 230px;
+  }
+  to{bottom: 200px;
+ }
+}
+
+@keyframes myAnimation2 {
+  from{
+    top: 300px;
+  }
+  to{
+    top: 330px
+  }
+}
+
+@keyframes myAnimation3 {
+  from{
+    top: 80px;
+  }
+
+  to{
+    top: 110px;
+  }
+}
+
+
+
+
+
+.stats {
+  width: 100%;
+  max-width: 700px;
+  margin: -30px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffead5;
+  padding: 25px 20px;
+  border-radius: 8px;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 1px;
+  height: 70%;
+  background: #d8d8d8;
+}
+
+.stat h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1;
+}
+
+.stat p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #a6a6a6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+
+
+/* responsive*/
+
+
+
+/* ===========================================
+            TABLET (768px - 1024px)
+=========================================== */
+
+@media screen and (max-width:1024px){
+
+.hero{
+    padding:50px 40px;
+}
+
+.top-badge{
+    margin-left:0;
+    margin-top:30px;
+    font-size:18px;
+    padding:10px 20px;
+}
+
+.badge-circle{
+    width:40px;
+    height:40px;
+}
+
+.hero-content{
+    gap:40px;
+}
+
+.hero-left{
+    width:48%;
+}
+
+.hero-left h1{
+    font-size:55px;
+}
+
+.hero-left span{
+    font-size:55px;
+}
+
+.hero-left p{
+    font-size:16px;
+}
+
+.hero-right{
+    width:50%;
+    right:0;
+}
+
+.circle-bg{
+    width:400px;
+    height:400px;
+}
+
+.burger{
+    width:370px;
+    height:370px;
+}
+
+.floating1{
+    width:170px;
+    padding:15px;
+}
+
+.hot{
+    left:-20px;
+    top:40px;
+}
+
+.delivery{
+    right:-10px;
+    top:220px;
+}
+
+.rating{
+    right:-20px;
+    bottom:80px;
+}
+
+.stats{
+    max-width:100%;
+    margin-top:40px;
+}
+
+.stat h2{
+    font-size:28px;
+}
+
+.stat p{
+    font-size:12px;
+}
+
+}
+
+
+/* ===========================================
+                MOBILE (<768px)
+=========================================== */
+
+@media screen and (max-width:768px){
+
+.hero{
+
+    padding:30px 20px;
+}
+
+.top-badge{
+
+    margin:20px auto;
+
+    width:100%;
+
+    justify-content:center;
+
+    font-size:14px;
+
+    text-align:center;
+
+    padding:10px 15px;
+}
+
+.badge-circle{
+
+    width:35px;
+
+    height:35px;
+}
+
+.hero-content{
+
+    flex-direction:column;
+
+    text-align:center;
+}
+
+.hero-left{
+
+    width:100%;
+}
+
+.hero-left h1{
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    text-align:center;
+}
+
+.hero-left span{
+
+    font-size:42px;
+}
+
+.hero-left h1::after{
+
+    margin:18px auto;
+
+    width:100px;
+}
+
+.hero-left p{
+
+    text-align:center;
+
+    font-size:15px;
+}
+
+.hero-right{
+
+    width:100%;
+
+    margin-top:50px;
+
+    right:0;
+}
+
+.circle-bg{
+
+    width:280px;
+
+    height:280px;
+}
+
+.burger{
+
+    width:260px;
+
+    height:260px;
+}
+
+/* Floating Cards */
+
+.floating1{
+
+    width:150px;
+
+    padding:12px;
+
+    gap:10px;
+}
+
+.floating1 h3{
+
+    font-size:15px;
+}
+
+.floating1 p{
+
+    font-size:12px;
+}
+
+.hot{
+
+    top:-20px;
+
+    left:0;
+}
+
+.delivery{
+
+    top:0px;
+
+    right:0;
+}
+
+.rating{
+
+    bottom:-20px;
+
+    right:10px;
+}
+
+.stats{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    padding:20px;
+}
+
+.stat{
+
+    padding:15px 10px;
+}
+
+.stat::after{
+
+    display:none;
+}
+
+.stat h2{
+
+    font-size:24px;
+}
+
+.stat p{
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+}
